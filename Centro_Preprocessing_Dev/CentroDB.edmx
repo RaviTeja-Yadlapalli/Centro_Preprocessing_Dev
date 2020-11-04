@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Centro_PreprocessingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Centro_Preprocessing_UNIQUE">
+          <Key>
+            <PropertyRef Name="UNIQUE_ID" />
+          </Key>
+          <Property Name="SERIAL_NUMBER" Type="int" />
+          <Property Name="UNIQUE_ID" Type="int" Nullable="false" />
+          <Property Name="SCHEDULE_ID" Type="int" />
+          <Property Name="SCHEDULE_NAME" Type="nvarchar" MaxLength="60" />
+          <Property Name="SURVEY_DATE" Type="datetime" />
+          <Property Name="PATTERN_ID" Type="int" />
+          <Property Name="ROUTE_NUMBER" Type="float" />
+          <Property Name="ROUTE_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIRECTION_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="BRANCH" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRIP_START_TIME" Type="datetime" />
+          <Property Name="TIME_PERIOD" Type="nvarchar" MaxLength="50" />
+          <Property Name="SERVICE_PERIOD" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRIP_NUMBER" Type="int" />
+          <Property Name="TRIP_KEY" Type="int" />
+          <Property Name="BLOCK_NUMBER" Type="int" />
+          <Property Name="BLOCK_KEY" Type="nvarchar" MaxLength="50" />
+          <Property Name="BLOCK_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="RUN_NUMBER" Type="int" />
+          <Property Name="RUN_KEY" Type="nvarchar" MaxLength="50" />
+          <Property Name="VEHICLE_NUMBER" Type="int" />
+          <Property Name="VEHICLE_DESCRIPTION" Type="nvarchar" MaxLength="50" />
+          <Property Name="VEHICLE_SEATS" Type="int" />
+          <Property Name="GARAGE_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIVISION_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="OPERATOR_ID" Type="int" />
+          <Property Name="COMMENTS" Type="nvarchar(max)" />
+          <Property Name="SORT_ORDER" Type="int" />
+          <Property Name="STOP_ID" Type="int" />
+          <Property Name="MAIN_CROSS_STREET" Type="nvarchar" MaxLength="101" />
+          <Property Name="TRAVEL_DIRECTION" Type="nvarchar" MaxLength="2" />
+          <Property Name="TIMEPOINT" Type="smallint" />
+          <Property Name="SEGMENT_MILES" Type="float" />
+          <Property Name="TIME_SCHEDULED" Type="datetime" />
+          <Property Name="TIME_ACTUAL_ARRIVE" Type="datetime" />
+          <Property Name="TIME_ACTUAL_DEPART" Type="datetime" />
+          <Property Name="DWELL_TIME" Type="float" />
+          <Property Name="RUNNING_TIME_ACTUAL" Type="float" />
+          <Property Name="PASSENGERS_ON" Type="int" />
+          <Property Name="PASSENGERS_OFF" Type="int" />
+          <Property Name="PASSENGERS_IN" Type="int" />
+          <Property Name="WHEELCHAIRS" Type="int" />
+          <Property Name="TIMEPOINT_MILES" Type="float" />
+          <Property Name="FIRST_LAST_STOP" Type="smallint" />
+          <Property Name="MODIFIED_FLAG" Type="bit" />
+          <Property Name="To_Be_Deleted" Type="bit" />
+          <Property Name="QUALITY_CHECK" Type="bit" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+        </EntityType>
+        <EntityContainer Name="Centro_PreprocessingModelStoreContainer">
+          <EntitySet Name="Centro_Preprocessing_UNIQUE" EntityType="Self.Centro_Preprocessing_UNIQUE" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Centro_PreprocessingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Centro_PreprocessingEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Centro_Preprocessing_UNIQUE" EntityType="Centro_PreprocessingModel.Centro_Preprocessing_UNIQUE" />
+        </EntityContainer>
+        <EntityType Name="Centro_Preprocessing_UNIQUE">
+          <Key>
+            <PropertyRef Name="UNIQUE_ID" />
+          </Key>
+          <Property Name="SERIAL_NUMBER" Type="Int32" />
+          <Property Name="UNIQUE_ID" Type="Int32" Nullable="false" />
+          <Property Name="SCHEDULE_ID" Type="Int32" />
+          <Property Name="SCHEDULE_NAME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="SURVEY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PATTERN_ID" Type="Int32" />
+          <Property Name="ROUTE_NUMBER" Type="Double" />
+          <Property Name="ROUTE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIRECTION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRIP_START_TIME" Type="DateTime" Precision="3" />
+          <Property Name="TIME_PERIOD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SERVICE_PERIOD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TRIP_NUMBER" Type="Int32" />
+          <Property Name="TRIP_KEY" Type="Int32" />
+          <Property Name="BLOCK_NUMBER" Type="Int32" />
+          <Property Name="BLOCK_KEY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BLOCK_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RUN_NUMBER" Type="Int32" />
+          <Property Name="RUN_KEY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VEHICLE_NUMBER" Type="Int32" />
+          <Property Name="VEHICLE_DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="VEHICLE_SEATS" Type="Int32" />
+          <Property Name="GARAGE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DIVISION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OPERATOR_ID" Type="Int32" />
+          <Property Name="COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SORT_ORDER" Type="Int32" />
+          <Property Name="STOP_ID" Type="Int32" />
+          <Property Name="MAIN_CROSS_STREET" Type="String" MaxLength="101" FixedLength="false" Unicode="true" />
+          <Property Name="TRAVEL_DIRECTION" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="TIMEPOINT" Type="Int16" />
+          <Property Name="SEGMENT_MILES" Type="Double" />
+          <Property Name="TIME_SCHEDULED" Type="DateTime" Precision="3" />
+          <Property Name="TIME_ACTUAL_ARRIVE" Type="DateTime" Precision="3" />
+          <Property Name="TIME_ACTUAL_DEPART" Type="DateTime" Precision="3" />
+          <Property Name="DWELL_TIME" Type="Double" />
+          <Property Name="RUNNING_TIME_ACTUAL" Type="Double" />
+          <Property Name="PASSENGERS_ON" Type="Int32" />
+          <Property Name="PASSENGERS_OFF" Type="Int32" />
+          <Property Name="PASSENGERS_IN" Type="Int32" />
+          <Property Name="WHEELCHAIRS" Type="Int32" />
+          <Property Name="TIMEPOINT_MILES" Type="Double" />
+          <Property Name="FIRST_LAST_STOP" Type="Int16" />
+          <Property Name="MODIFIED_FLAG" Type="Boolean" />
+          <Property Name="To_Be_Deleted" Type="Boolean" />
+          <Property Name="QUALITY_CHECK" Type="Boolean" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Centro_PreprocessingModelStoreContainer" CdmEntityContainer="Centro_PreprocessingEntities">
+          <EntitySetMapping Name="Centro_Preprocessing_UNIQUE">
+            <EntityTypeMapping TypeName="Centro_PreprocessingModel.Centro_Preprocessing_UNIQUE">
+              <MappingFragment StoreEntitySet="Centro_Preprocessing_UNIQUE">
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="QUALITY_CHECK" ColumnName="QUALITY_CHECK" />
+                <ScalarProperty Name="To_Be_Deleted" ColumnName="To_Be_Deleted" />
+                <ScalarProperty Name="MODIFIED_FLAG" ColumnName="MODIFIED_FLAG" />
+                <ScalarProperty Name="FIRST_LAST_STOP" ColumnName="FIRST_LAST_STOP" />
+                <ScalarProperty Name="TIMEPOINT_MILES" ColumnName="TIMEPOINT_MILES" />
+                <ScalarProperty Name="WHEELCHAIRS" ColumnName="WHEELCHAIRS" />
+                <ScalarProperty Name="PASSENGERS_IN" ColumnName="PASSENGERS_IN" />
+                <ScalarProperty Name="PASSENGERS_OFF" ColumnName="PASSENGERS_OFF" />
+                <ScalarProperty Name="PASSENGERS_ON" ColumnName="PASSENGERS_ON" />
+                <ScalarProperty Name="RUNNING_TIME_ACTUAL" ColumnName="RUNNING_TIME_ACTUAL" />
+                <ScalarProperty Name="DWELL_TIME" ColumnName="DWELL_TIME" />
+                <ScalarProperty Name="TIME_ACTUAL_DEPART" ColumnName="TIME_ACTUAL_DEPART" />
+                <ScalarProperty Name="TIME_ACTUAL_ARRIVE" ColumnName="TIME_ACTUAL_ARRIVE" />
+                <ScalarProperty Name="TIME_SCHEDULED" ColumnName="TIME_SCHEDULED" />
+                <ScalarProperty Name="SEGMENT_MILES" ColumnName="SEGMENT_MILES" />
+                <ScalarProperty Name="TIMEPOINT" ColumnName="TIMEPOINT" />
+                <ScalarProperty Name="TRAVEL_DIRECTION" ColumnName="TRAVEL_DIRECTION" />
+                <ScalarProperty Name="MAIN_CROSS_STREET" ColumnName="MAIN_CROSS_STREET" />
+                <ScalarProperty Name="STOP_ID" ColumnName="STOP_ID" />
+                <ScalarProperty Name="SORT_ORDER" ColumnName="SORT_ORDER" />
+                <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+                <ScalarProperty Name="OPERATOR_ID" ColumnName="OPERATOR_ID" />
+                <ScalarProperty Name="DIVISION_NAME" ColumnName="DIVISION_NAME" />
+                <ScalarProperty Name="GARAGE_NAME" ColumnName="GARAGE_NAME" />
+                <ScalarProperty Name="VEHICLE_SEATS" ColumnName="VEHICLE_SEATS" />
+                <ScalarProperty Name="VEHICLE_DESCRIPTION" ColumnName="VEHICLE_DESCRIPTION" />
+                <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+                <ScalarProperty Name="RUN_KEY" ColumnName="RUN_KEY" />
+                <ScalarProperty Name="RUN_NUMBER" ColumnName="RUN_NUMBER" />
+                <ScalarProperty Name="BLOCK_NAME" ColumnName="BLOCK_NAME" />
+                <ScalarProperty Name="BLOCK_KEY" ColumnName="BLOCK_KEY" />
+                <ScalarProperty Name="BLOCK_NUMBER" ColumnName="BLOCK_NUMBER" />
+                <ScalarProperty Name="TRIP_KEY" ColumnName="TRIP_KEY" />
+                <ScalarProperty Name="TRIP_NUMBER" ColumnName="TRIP_NUMBER" />
+                <ScalarProperty Name="SERVICE_PERIOD" ColumnName="SERVICE_PERIOD" />
+                <ScalarProperty Name="TIME_PERIOD" ColumnName="TIME_PERIOD" />
+                <ScalarProperty Name="TRIP_START_TIME" ColumnName="TRIP_START_TIME" />
+                <ScalarProperty Name="BRANCH" ColumnName="BRANCH" />
+                <ScalarProperty Name="DIRECTION_NAME" ColumnName="DIRECTION_NAME" />
+                <ScalarProperty Name="ROUTE_NAME" ColumnName="ROUTE_NAME" />
+                <ScalarProperty Name="ROUTE_NUMBER" ColumnName="ROUTE_NUMBER" />
+                <ScalarProperty Name="PATTERN_ID" ColumnName="PATTERN_ID" />
+                <ScalarProperty Name="SURVEY_DATE" ColumnName="SURVEY_DATE" />
+                <ScalarProperty Name="SCHEDULE_NAME" ColumnName="SCHEDULE_NAME" />
+                <ScalarProperty Name="SCHEDULE_ID" ColumnName="SCHEDULE_ID" />
+                <ScalarProperty Name="UNIQUE_ID" ColumnName="UNIQUE_ID" />
+                <ScalarProperty Name="SERIAL_NUMBER" ColumnName="SERIAL_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
