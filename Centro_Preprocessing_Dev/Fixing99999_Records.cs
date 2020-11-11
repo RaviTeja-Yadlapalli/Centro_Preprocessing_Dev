@@ -42,7 +42,7 @@ namespace Centro_Preprocessing_Dev
                     {
                         if (allStops.First(x => x.UNIQUE_ID == succeed).STOP_ID != 99999)
                         {
-                            preceedingRecord = succeed;
+                            succeedingRecord = succeed;
                             break;
                         }
                     }
@@ -121,7 +121,7 @@ namespace Centro_Preprocessing_Dev
                     else
                     {
                         //finding a record with same COMMENTS as of selected 99999 column
-                        var matchedRecord = allStops.Where(x => x.COMMENTS == stop.COMMENTS).First();
+                        var matchedRecord = allStops.Where(x => x.COMMENTS == stop.COMMENTS).Where(x => x.SORT_ORDER == stop.SORT_ORDER).Where(x => x.TIMEPOINT != -1).Where(x => x.STOP_ID != 99999).First();
                         allStops.First(x => x.UNIQUE_ID == stop.UNIQUE_ID).STOP_ID = matchedRecord.STOP_ID;
                         allStops.First(x => x.UNIQUE_ID == stop.UNIQUE_ID).MAIN_CROSS_STREET = matchedRecord.MAIN_CROSS_STREET;
                         allStops.First(x => x.UNIQUE_ID == stop.UNIQUE_ID).TRAVEL_DIRECTION = matchedRecord.TRAVEL_DIRECTION;
@@ -132,8 +132,8 @@ namespace Centro_Preprocessing_Dev
                     }
 
                 }
-
-                //entities.SaveChanges();
+               // entities.Centro_Preprocessing_UNIQUE.AddRange(allStops);
+                entities.SaveChanges();
 
             }
         }

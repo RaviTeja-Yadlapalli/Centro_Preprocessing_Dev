@@ -52,7 +52,7 @@ namespace Centro_Preprocessing_Dev
                     }
                 }
 
-                //entities.SaveChanges();
+                entities.SaveChanges();
 
             }
         }

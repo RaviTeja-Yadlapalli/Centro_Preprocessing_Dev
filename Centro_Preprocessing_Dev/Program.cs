@@ -16,6 +16,8 @@ namespace Centro_Preprocessing_Dev
             fixNullTimes.fixArriveDepartTimes();
             FixTimePointMinus1 fixTimePointMinus1 = new FixTimePointMinus1();
             fixTimePointMinus1.fixTimepointMinus1();
+
+            Console.ReadKey();
         }
     }
 }

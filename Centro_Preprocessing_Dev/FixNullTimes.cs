@@ -166,7 +166,7 @@ namespace Centro_Preprocessing_Dev
                     allStops.First(x => x.UNIQUE_ID == stop.UNIQUE_ID).MODIFIED_FLAG = true;
                 }
 
-                //entities.SaveChanges();
+                entities.SaveChanges();
             }
         }
     }

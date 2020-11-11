@@ -10,7 +10,7 @@
             <PropertyRef Name="UNIQUE_ID" />
           </Key>
           <Property Name="SERIAL_NUMBER" Type="int" />
-          <Property Name="UNIQUE_ID" Type="int" Nullable="false" />
+          <Property Name="UNIQUE_ID" Type="bigint" Nullable="false" />
           <Property Name="SCHEDULE_ID" Type="int" />
           <Property Name="SCHEDULE_NAME" Type="nvarchar" MaxLength="60" />
           <Property Name="SURVEY_DATE" Type="datetime" />
@@ -59,6 +59,54 @@
           <Property Name="LATITUDE" Type="float" />
           <Property Name="LONGITUDE" Type="float" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Centro_Preprocessing.dbo.SY16' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SY16">
+          <Property Name="SERIAL_NUMBER" Type="int" />
+          <Property Name="SCHEDULE_ID" Type="int" />
+          <Property Name="SCHEDULE_NAME" Type="nvarchar" MaxLength="60" />
+          <Property Name="SURVEY_DATE" Type="datetime" />
+          <Property Name="PATTERN_ID" Type="int" />
+          <Property Name="ROUTE_NUMBER" Type="float" />
+          <Property Name="ROUTE_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIRECTION_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="BRANCH" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRIP_START_TIME" Type="datetime" />
+          <Property Name="TIME_PERIOD" Type="nvarchar" MaxLength="50" />
+          <Property Name="SERVICE_PERIOD" Type="nvarchar" MaxLength="50" />
+          <Property Name="TRIP_NUMBER" Type="int" />
+          <Property Name="TRIP_KEY" Type="int" />
+          <Property Name="BLOCK_NUMBER" Type="int" />
+          <Property Name="BLOCK_KEY" Type="nvarchar" MaxLength="50" />
+          <Property Name="BLOCK_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="RUN_NUMBER" Type="int" />
+          <Property Name="RUN_KEY" Type="nvarchar" MaxLength="50" />
+          <Property Name="VEHICLE_NUMBER" Type="int" />
+          <Property Name="VEHICLE_DESCRIPTION" Type="nvarchar" MaxLength="50" />
+          <Property Name="VEHICLE_SEATS" Type="int" />
+          <Property Name="GARAGE_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="DIVISION_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="OPERATOR_ID" Type="int" />
+          <Property Name="COMMENTS" Type="nvarchar(max)" />
+          <Property Name="SORT_ORDER" Type="int" />
+          <Property Name="STOP_ID" Type="int" />
+          <Property Name="MAIN_CROSS_STREET" Type="nvarchar" MaxLength="101" />
+          <Property Name="TRAVEL_DIRECTION" Type="nvarchar" MaxLength="2" />
+          <Property Name="TIMEPOINT" Type="smallint" />
+          <Property Name="SEGMENT_MILES" Type="float" />
+          <Property Name="TIME_SCHEDULED" Type="datetime" />
+          <Property Name="TIME_ACTUAL_ARRIVE" Type="datetime" />
+          <Property Name="TIME_ACTUAL_DEPART" Type="datetime" />
+          <Property Name="DWELL_TIME" Type="float" />
+          <Property Name="RUNNING_TIME_ACTUAL" Type="float" />
+          <Property Name="PASSENGERS_ON" Type="int" />
+          <Property Name="PASSENGERS_OFF" Type="int" />
+          <Property Name="PASSENGERS_IN" Type="int" />
+          <Property Name="WHEELCHAIRS" Type="int" />
+          <Property Name="TIMEPOINT_MILES" Type="float" />
+          <Property Name="FIRST_LAST_STOP" Type="smallint" />
+          <Property Name="Unique_ID" Type="bigint" />
+        </EntityType>-->
         <EntityContainer Name="Centro_PreprocessingModelStoreContainer">
           <EntitySet Name="Centro_Preprocessing_UNIQUE" EntityType="Self.Centro_Preprocessing_UNIQUE" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
